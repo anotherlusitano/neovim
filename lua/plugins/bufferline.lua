@@ -7,6 +7,8 @@ vim.pack.add {
 vim.keymap.set('n', '<leader>bd', '<Cmd>Bdelete<CR>', { desc = 'Delete Buffer', silent = true })
 vim.keymap.set('n', '<S-l>', '<Cmd>bnext<CR>', { desc = 'Next Buffer', silent = true })
 vim.keymap.set('n', '<S-h>', '<Cmd>bprevious<CR>', { desc = 'Previous Buffer', silent = true })
+vim.keymap.set('n', '<leader>br', '<Cmd>BufferLineCloseRight<CR>', { desc = 'Delete Buffers to the Right' })
+vim.keymap.set('n', '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', { desc = 'Delete Buffers to the Left' })
 
 vim.opt.termguicolors = true
 require('bufferline').setup({
