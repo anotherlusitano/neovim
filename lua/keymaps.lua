@@ -28,7 +28,7 @@ vim.diagnostic.config {
   },
 }
 
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>h', vim.diagnostic.setloclist, { desc = 'Open diagnostic Quickfix list' })
 
 vim.keymap.set('n', '<leader>qq', '<Cmd>qa<CR>', { desc = 'Quit Neovim' })
 
