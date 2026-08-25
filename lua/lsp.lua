@@ -3,6 +3,7 @@ vim.pack.add { 'https://github.com/neovim/nvim-lspconfig' }
 -- NOTE: Do not forget to add the packages to `mason_config.lua`
 require 'lsp.lua'
 require 'lsp.go'
+require 'lsp.rust'
 
 -- Notifications
 vim.pack.add { 'https://github.com/j-hui/fidget.nvim' }
