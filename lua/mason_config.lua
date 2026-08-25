@@ -7,6 +7,7 @@ require('mason').setup {}
 
 require('mason-tool-installer').setup {
   ensure_installed = {
-    -- TODO: add the packages
+    'emmylua_ls',
+    'stylua',
   },
 }
