@@ -9,5 +9,6 @@ require('mason-tool-installer').setup {
   ensure_installed = {
     'emmylua_ls',
     'stylua',
+    'gopls',
   },
 }
