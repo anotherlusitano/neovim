@@ -10,5 +10,6 @@ require('mason-tool-installer').setup {
     'emmylua_ls',
     'stylua',
     'gopls',
+    'markdownlint',
   },
 }
