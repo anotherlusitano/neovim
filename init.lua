@@ -8,5 +8,6 @@ require 'autocomplete'
 require 'treesitter'
 require 'diagnostics'
 require 'plugins'
+require 'colorschemes'
 
 vim.g.start_time = vim.uv.hrtime() -- Used for dashboard to display startup time
