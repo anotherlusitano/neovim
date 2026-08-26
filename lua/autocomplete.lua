@@ -25,6 +25,13 @@ require('blink.cmp').setup {
     documentation = { auto_show = false, auto_show_delay_ms = 500 },
   },
 
+  cmdline = {
+    enabled = true,
+    keymap = {
+      ['<CR>'] = { 'select_accept_and_enter', 'fallback' },
+    },
+  },
+
   sources = {
     default = { 'lsp', 'path', 'snippets' },
   },
