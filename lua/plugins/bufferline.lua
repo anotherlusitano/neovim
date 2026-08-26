@@ -11,15 +11,18 @@ vim.keymap.set('n', '<leader>br', '<Cmd>BufferLineCloseRight<CR>', { desc = 'Del
 vim.keymap.set('n', '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', { desc = 'Delete Buffers to the Left' })
 
 vim.opt.termguicolors = true
-require('bufferline').setup({
+require('bufferline').setup {
   options = {
     offsets = {
       {
-        filetype = "neo-tree",
-        text = "Nvim Tree",
+        filetype = 'neo-tree',
+        text = 'Nvim Tree',
         separator = true,
-        text_align = "left",
-      }
-    }
-  }
-})
+        text_align = 'left',
+      },
+    },
+    custom_filter = function(buf)
+      if vim.bo[buf].filetype ~= 'terminal' and vim.bo[buf].buftype ~= 'terminal' then return true end
+    end,
+  },
+}
