@@ -67,6 +67,9 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- Remove the tildes
+vim.opt.fillchars = { eob = ' ' }
+
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
