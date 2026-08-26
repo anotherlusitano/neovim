@@ -74,3 +74,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function() vim.hl.on_yank() end,
 })
+
+local function open_bottom_terminal()
+  if vim.bo.filetype == 'neo-tree' then vim.cmd 'wincmd l' end
+  vim.cmd 'belowright 12split | terminal'
+  vim.cmd 'startinsert'
+end
+
+vim.keymap.set('n', '<leader>ft', open_bottom_terminal, { desc = 'Terminal' })
