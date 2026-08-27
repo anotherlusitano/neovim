@@ -4,6 +4,7 @@ vim.pack.add { 'https://github.com/neovim/nvim-lspconfig' }
 require 'lsp.lua'
 require 'lsp.go'
 require 'lsp.rust'
+require 'lsp.typescript'
 
 -- Notifications
 vim.pack.add { 'https://github.com/j-hui/fidget.nvim' }
