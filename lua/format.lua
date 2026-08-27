@@ -4,10 +4,18 @@ require('conform').setup {
   notify_on_error = false,
   format_on_save = function(bufnr)
     -- You can specify filetypes to autoformat on save here:
-    local enabled_filetypes = { lua = true, go = true, rust = true }
+    local enabled_filetypes = {
+      lua = true,
+      go = true,
+      rust = true,
+      javascript = true,
+      javascriptreact = true,
+      typescript = true,
+      typescriptreact = true,
+    }
 
     if enabled_filetypes[vim.bo[bufnr].filetype] then
-      return { timeout_ms = 500 }
+      return { timeout_ms = 700 }
     else
       return nil
     end
@@ -18,6 +26,15 @@ require('conform').setup {
 
   formatters_by_ft = {
     lua = { 'stylua' },
+    javascript = { 'prettier' },
+    typescript = { 'prettier' },
+    javascriptreact = { 'prettier' },
+    typescriptreact = { 'prettier' },
+    css = { 'prettier' },
+    html = { 'prettier' },
+    json = { 'prettier' },
+    yaml = { 'prettier' },
+    markdown = { 'prettier' },
   },
 }
 

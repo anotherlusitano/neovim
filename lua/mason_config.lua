@@ -11,6 +11,7 @@ require('mason-tool-installer').setup {
     'stylua',
     'gopls',
     'typescript-language-server',
+    'prettier',
     'markdownlint',
   },
 }
