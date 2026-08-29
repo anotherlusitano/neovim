@@ -15,3 +15,5 @@ require('mason-tool-installer').setup {
     'markdownlint',
   },
 }
+
+vim.keymap.set('n', '<leader>cm', '<Cmd>Mason<CR>', { desc = 'Mason' })
